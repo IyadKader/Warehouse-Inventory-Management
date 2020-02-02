@@ -5,12 +5,12 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const app = express();
 
-const connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: 'rootroot',
-  database: 'InventoryManagement'
-});
+// const connection = mysql.createConnection({
+//   host: 'localhost',
+//   user: 'root',
+//   password: 'rootroot',
+//   database: 'InventoryManagement'
+// });
 
 connection.connect(function (err) {
   if (err) {
