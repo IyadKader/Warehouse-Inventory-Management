@@ -5,12 +5,12 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const app = express();
 
-// const connection = mysql.createConnection({
-//   host: 'localhost',
-//   user: 'root',
-//   password: 'rootroot',
-//   database: 'InventoryManagement'
-// });
+const connection = mysql.createConnection({
+  host: 'localhost',
+  user: 'root',
+  password: 'rootroot',
+  database: 'warehouseInventory'
+});
 
 connection.connect(function (err) {
   if (err) {
@@ -29,7 +29,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.get('/', function (request, response) {
-  response.sendFile(path.join(__dirname + '/../views/index.html'));
+  response.sendFile(path.join(__dirname + '/../views/login.html'));
 });
 
 app.post('/auth', function (request, response) {
