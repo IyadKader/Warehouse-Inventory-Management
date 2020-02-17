@@ -27,10 +27,15 @@ app.use(session({
 }));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', function (request, response) {
-  response.sendFile(path.join(__dirname + '/../views/login.html'));
+  response.sendFile(path.join(__dirname, './public/login.html'));
 });
+
+app.get('/home', function (request, response) {
+  response.sendFile(path.join(__dirname, './public/inventorySelection.html'))
+})
 
 app.post('/auth', function (request, response) {
   const username = request.body.username;

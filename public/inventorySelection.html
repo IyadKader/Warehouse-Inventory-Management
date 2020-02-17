@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <title>Home page</title>
@@ -68,8 +69,39 @@
           </div>
         </div>
         
-        
-        
+
+        <!-- Input and dropdown menus for adding items -->
+        <div class="container">
+        <div class="input-group">
+          <input type="text" class="itemInput" aria-label="Text input with dropdown button">
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">Type</button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">CRT</a>
+                <a class="dropdown-item" href="#">LCD</a>
+                <a class="dropdown-item" href="#">Scanner</a>
+                <div role="separator" class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Separated link</a>
+              </div>
+            </div>
+          </div>
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">Condition</button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">New</a>
+              <a class="dropdown-item" href="#">Used</a>
+              <a class="dropdown-item" href="#">Refurbished</a>
+              <a class="dropdown-item" href="#">QC Inbound</a>
+              <div role="separator" class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Scrap</a>
+            </div>
+          </div>
+          </div>
+  <div class="addBtn">
+    <button type="button" class="btn btn-primary">Add Item</button>
+  </div>
         
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">

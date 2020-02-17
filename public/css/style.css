@@ -6,6 +6,32 @@
 #employeeIdInput{
   padding: 5rem;
 }
+.addBtn{
+  text-align: center;
+  padding: 2rem;
+}
+
+input.itemInput {
+  width: 20%;
+}
+
+.conditionBtn{
+  text-align: center;
+  padding: 2rem;
+}
+
+.container{
+  width: 300px;
+}
+input.input-group{
+  width: 100px;
+  float: left;
+  height: 300px;
+}
+input.input-group-append{
+  width: 200px;
+  float: left;
+}
 
 .login-form {
   width: 300px;
