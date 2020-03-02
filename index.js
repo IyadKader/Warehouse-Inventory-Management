@@ -66,6 +66,33 @@ app.get('/home', function (request, response) {
   response.end();
 });
 
+app.get('/inventory', function (request, response) {
+  connection.query('SELECT * from inventory')
+})
+
+app.post('/inventoryManagement' , function (request, response) {
+  const itemID = request.body.itemID
+  const itemName = request.body.itemName
+  const itemType = request.body.itemType
+  const itemCondition = request.body.itemCondition
+
+  connection.query("INSERT INTO inventory (itemType) VALUES (?)", [itemType], function(err, result) {
+    if(err) throw err;
+      console.log("1 record inserted");
+  });
+  response.send(itemType);
+});
+// app.post('/inventorySelection', function (request, response) {
+//   const itemID = request.body.itemID
+//   const itemName = request.body.itemName
+//   const itemType = request.body.itemType
+//   const itemCondition = request.body.itemCondition
+//   if (itemID && itemName && itemType && itemCondition) {
+//     connection.query('SELECT * from inventory where itemID = ? and itemName = ? and itemType = ? and itemCondition = ?', [itemID, itemName, itemType, itemCondition], function (error,results, fields) {
+      
+//     })
+//   }
+// })
 const PORT = process.env.PORT || 5000
 
 app.listen(PORT, () => console.log(`Server is now running on port ${PORT}`));

@@ -14,6 +14,7 @@
   <h1>Inventory Selection Page</h1>
 
   <!-- Example split danger button -->
+  <div class="container">
   <div class="btn-group">
     <button type="button" id="printerBtn"class="btn btn-danger">Printers</button>
     <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"
@@ -68,14 +69,16 @@
             <a class="dropdown-item" href="#">Scrap</a>
           </div>
         </div>
-        
+    </div>
 
         <!-- Input and dropdown menus for adding items -->
-        <div class="container">
         <div class="input-group">
+          <form action="/inventoryManagement" method="POST">
           <input type="text" class="itemInput" aria-label="Text input with dropdown button">
+          <input type="submit">
+          </form>
           <div class="input-group-append">
-            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown"
+            <button id="itemInputBtn" class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown"
               aria-haspopup="true" aria-expanded="false">Type</button>
               <div class="dropdown-menu">
                 <a class="dropdown-item" href="#">CRT</a>
@@ -86,10 +89,12 @@
               </div>
             </div>
           </div>
-          <div class="input-group-append">
+          <div class="input-group-append" id="condition">
+            <div class="buttonCondition">
             <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown"
               aria-haspopup="true" aria-expanded="false">Condition</button>
-            <div class="dropdown-menu">
+            </div>
+              <div class="dropdown-menu">
               <a class="dropdown-item" href="#">New</a>
               <a class="dropdown-item" href="#">Used</a>
               <a class="dropdown-item" href="#">Refurbished</a>
@@ -98,7 +103,7 @@
               <a class="dropdown-item" href="#">Scrap</a>
             </div>
           </div>
-          </div>
+
   <div class="addBtn">
     <button type="button" class="btn btn-primary">Add Item</button>
   </div>

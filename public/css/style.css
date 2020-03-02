@@ -8,6 +8,7 @@
 }
 .addBtn{
   text-align: center;
+  margin-top: 5rem;
   padding: 2rem;
 }
 
@@ -15,22 +16,38 @@ input.itemInput {
   width: 20%;
 }
 
-.conditionBtn{
+.input-group{
+  position: relative;
+  margin: auto;
   text-align: center;
-  padding: 2rem;
 }
+
+.itemInput{
+  position: absolute;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+#itemInputBtn{
+  margin-top: 4rem;
+  
+}
+.input-group-append{
+  position: relative;
+}
+.buttonCondition{
+  position: relative;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+}
+
 
 .container{
   width: 300px;
-}
-input.input-group{
-  width: 100px;
-  float: left;
-  height: 300px;
-}
-input.input-group-append{
-  width: 200px;
-  float: left;
+  text-align: center;
 }
 
 .login-form {
